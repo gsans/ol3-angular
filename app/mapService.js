@@ -1,48 +1,9 @@
-var app = angular.module('plunker', ['ngMdIcons', 'ui.bootstrap', 'ngSanitize']);
+(function() {
 
-app.controller('MainController', function($scope, mapService, $timeout) {
-  mapService.init({
-    extractStylesKml: false,
-    popupOffset: [-4,-43],
-    featurePropertiesMap: ['name', 'description', 'Enlace a la ruta'], //override default mapping
-    onFeatureSelected: onFeatureSelected, //override default event handler
-    setFeatureDetails: setFeatureDetails
-  });
-  $scope.staticTabs = { search: true, details: false };
-  $scope.features = mapService.getFeatures();
-  
-  // private
-  function setFeatureDetails(feature){
-    // safely run after digest cycle
-    // needed to handle user list selection 
-    $timeout(function(){
-      $scope.feature = feature;
-    });
-  }
-  
-  function selectTab(key){
-    if ($scope.staticTabs.hasOwnProperty(key))
-      $scope.staticTabs[key] = true;
-  }
-  
-  function onFeatureSelected(feature) {
-    console.log("feature selected", feature);
-    selectTab("details");
-  }
-  
-  //public
-  $scope.selectFeature = function(name){
-    mapService.selectFeature(name, true);
-  }  
-  
-  $scope.hideFeatures = function(features, search){
-    mapService.hideFeatures(features, search);
-  };
-})
+'use strict';
+angular.module('app').factory('mapService', ['$compile', service]);
 
-// KML reference https://developers.google.com/kml/documentation/kmlreference
-
-.factory('mapService', function($compile){
+function service($compile){
   var ms = {};
   var defaults = {
     zoom: 15,
@@ -92,6 +53,7 @@ app.controller('MainController', function($scope, mapService, $timeout) {
   }
   
   ms.selectFeature = function(name, pan){
+    var feature;
     if (!name) return;
     var target = $("#map path[feature='" + escape(name) + "']")[0];
     
@@ -131,10 +93,10 @@ app.controller('MainController', function($scope, mapService, $timeout) {
   			if (feature) {
   				setTimeout(function(){
   					var coord = feature.getGeometry().getCoordinates();
-            var link =  "<a href='" + feature.get('Enlace a la ruta') + "' target='_blank'>" + feature.get('name') + "</a>";
+            var title = feature.get('name');
     				popup.setPosition(coord);
     				$(element).popover({
-    				  'title': link, 
+    				  'title': title, 
     				  'placement': 'top',
               'animation': false,
               'html': true
@@ -536,52 +498,7 @@ app.controller('MainController', function($scope, mapService, $timeout) {
 	ol.inherits(MyZoomToExtentControl, ol.control.ZoomToExtent);
   
   return ms;
-})
+}
 
-.filter('highlight', function($sce) {
-  return function(text, query) {
-    if (!query) return text;
-    var terms = query.split(' ') || [query]; //split query terms by space character
-    
-    terms.forEach(function(item){
-      if (text)
-        text = text.replace(new RegExp('('+item+')', 'gi'),
-          '<span class="highlighted">$1</span>')
-    });
-    
-    return $sce.trustAsHtml(text);
-  }
-})
 
-//http://stackoverflow.com/questions/23504757/angular-js-filter-by-logical-and-using-multiple-terms
-.filter('multiple', function() {
-  return function(items, query, scope) {
-    if (!query) {
-      scope.hideFeatures([], query);
-      return items; // return all items if nothing in query box
-    }
-
-    var terms = query.split(' '); //split query terms by space character
-    var arrayToReturn = [];
-
-    items.forEach(function(item){ // iterate through array of items
-      var passTest = true;
-      terms.forEach(function(term){ // iterate through terms found in query box
-
-        passTest = passTest && ( 
-            (item.name.toLowerCase().indexOf(term.toLowerCase()) > -1) ||
-            (item.description.toLowerCase().indexOf(term.toLowerCase()) > -1)
-          );
-      });
-      // Add item to return array only if passTest is true -- all search terms were found in item
-      if (passTest) { arrayToReturn.push(item); }
-    });
-    
-    var f = arrayToReturn.map(function(feature){
-      return feature.name;
-    })
-    scope.hideFeatures(f, query);
-
-    return arrayToReturn;
-  }
-});
+})();
