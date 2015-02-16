@@ -10,6 +10,7 @@ angular.module('app').filter('highlight', ['$sce', filter]);
  * @returns {returnedFunction} highlight filter
  * 
  * See [$sce]{@link https://docs.angularjs.org/api/ng/service/$sce}
+ * Credits [higlight filter]{@link http://stackoverflow.com/questions/15519713/highlighting-a-filtered-result-in-angularjs/27798600#27798600}
  */
 function filter($sce) {
   return highlight;

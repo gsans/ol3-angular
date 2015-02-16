@@ -9,6 +9,8 @@ angular.module('app').filter('multiple', ['$rootScope', filter]);
  *
  * @param {$rootScope} $rootScope
  * @returns {Function} multiple filter
+ *
+ * Credits [multiple filter]{@link http://stackoverflow.com/questions/23504757/angular-js-filter-by-logical-and-using-multiple-terms}
  */
 function filter($rootScope) {
   return multiple;
