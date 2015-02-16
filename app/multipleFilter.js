@@ -2,37 +2,62 @@
 (function() {
 
 'use strict';
-angular.module('app').filter('multiple', filter);
+angular.module('app').filter('multiple', ['$rootScope', filter]);
 
-function filter() {
-  return function(items, query, scope) {
-    if (!query) {
-      scope.hideFeatures([], query);
-      return items; // return all items if nothing in query box
+/**
+ * Creates a filter that takes into account multiple search terms
+ *
+ * @param {$rootScope} $rootScope
+ * @returns {Function} multiple filter
+ */
+function filter($rootScope) {
+  return multiple;
+
+  /**
+   * Multiple filter
+   * @param  {String} items - filter expression
+   * @param  {String} searchTerms - search 
+   */
+  function multiple(items, searchTerms) {
+    // return all items if searchTerms is empty
+    if (!searchTerms) {
+      triggerHideFeatures([], $rootScope);
+      return items; 
     }
 
-    var terms = query.split(' '); //split query terms by space character
-    var arrayToReturn = [];
+    var terms = searchTerms.split(' '),
+      matchingItems = [],
+      passTest;
 
-    items.forEach(function(item){ // iterate through array of items
-      var passTest = true;
-      terms.forEach(function(term){ // iterate through terms found in query box
-
+    items.forEach(function(item){ 
+      passTest = true;
+      terms.forEach(function(term){ 
+        // we check the default KML properties
         passTest = passTest && ( 
             (item.name.toLowerCase().indexOf(term.toLowerCase()) > -1) ||
             (item.description.toLowerCase().indexOf(term.toLowerCase()) > -1)
           );
       });
-      // Add item to return array only if passTest is true -- all search terms were found in item
-      if (passTest) { arrayToReturn.push(item); }
+      // Add item to return array only if passTest is true,
+      // all search terms were found in item
+      if (passTest) { matchingItems.push(item); }
     });
     
-    var f = arrayToReturn.map(function(feature){
+    triggerHideFeatures(matchingItems, $rootScope);
+
+    return matchingItems;
+  }
+
+  /**
+   * Notifies the application with the matching features
+   * @param  {Array} matchingItems - filtered features
+   * @param  {Object} $rootScope - $rootScope 
+   */
+  function triggerHideFeatures(matchingItems, $rootScope){
+    var featuresArray = matchingItems.map(function(feature){
       return feature.name;
     })
-    scope.hideFeatures(f, query);
-
-    return arrayToReturn;
+    $rootScope.$broadcast("global.hide-features", featuresArray);
   }
 }
 

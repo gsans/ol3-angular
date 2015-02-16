@@ -2,9 +2,9 @@
 
 'use strict';
 angular.module('app').controller('MainController',
-  ['mapService', '$timeout', controller]);
+  ['mapService', '$timeout', '$rootScope', controller]);
 
-function controller(mapService, $timeout) {
+function controller(mapService, $timeout, $rootScope) {
   var vm = this;
   mapService.init({
       extractStylesKml: false,
@@ -15,6 +15,7 @@ function controller(mapService, $timeout) {
   });
   vm.staticTabs = { search: true, details: false };
   vm.features = mapService.getFeatures();
+
   
   // private
   function setFeatureDetails(feature){
@@ -40,9 +41,12 @@ function controller(mapService, $timeout) {
     mapService.selectFeature(name, true);
   }  
   
-  vm.hideFeatures = function(features, search){
-    mapService.hideFeatures(features, search);
+  vm.hideFeatures = function(event, features){
+    mapService.hideFeatures(features, vm.search);
   };
+
+  //subscribe to events
+  $rootScope.$on("global.hide-features", vm.hideFeatures);
 }
 
 })();

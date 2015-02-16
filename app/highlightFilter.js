@@ -3,18 +3,34 @@
 'use strict';
 angular.module('app').filter('highlight', ['$sce', filter]);
 
+/**
+ * Creates a filter that wraps each search term occurrence in a span element with the 'highlighted' css class
+ *
+ * @param {$sceProvider} $sce
+ * @returns {returnedFunction} highlight filter
+ * 
+ * See [$sce]{@link https://docs.angularjs.org/api/ng/service/$sce}
+ */
 function filter($sce) {
-  return function(text, query) {
-    if (!query) return text;
-    var terms = query.split(' ') || [query]; //split query terms by space character
+  return highlight;
+
+  /**
+   * Highlight filter
+   * @param  {String} inputText - filter expression
+   * @param  {String} searchTerms - search 
+   */
+  function highlight(inputText, searchTerms) {
+    if (!searchTerms) return inputText;
+    // split search terms by space character
+    var terms = searchTerms.split(' ') || [searchTerms]; 
     
     terms.forEach(function(item){
-      if (text)
-        text = text.replace(new RegExp('('+item+')', 'gi'),
+      if (inputText)
+        inputText = inputText.replace(new RegExp('(' + item + ')', 'gi'),
           '<span class="highlighted">$1</span>')
     });
-    
-    return $sce.trustAsHtml(text);
+
+    return $sce.trustAsHtml(inputText);
   }
 }
 

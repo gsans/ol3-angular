@@ -51,7 +51,7 @@
         
         <div class="list" ng-show="filtered.length>0">
           <ul>
-            <li ng-repeat="f in filtered = (mc.features | multiple: mc.search: mc)" class="feature-result" ng-click="mc.selectFeature(f.name);">
+            <li ng-repeat="f in filtered = (mc.features | multiple: mc.search)" class="feature-result" ng-click="mc.selectFeature(f.name);">
               <div>
                 <span>{{f.name}}</span>
               </div>
