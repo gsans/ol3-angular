@@ -461,14 +461,11 @@ function service($compile){
 
 	  var button = document.createElement('button');
 	  button.id = 'zoom-to-extent';
-	  button.setAttribute('class', 'ol-has-tooltip');
-
-	  var fitIcon = document.createElement('i');
-	  fitIcon.className = "fa fa-arrows-alt";
-	  button.appendChild(fitIcon);
+    button.setAttribute("title","Zoom to Extent");
 
 	  var span = document.createElement('span');
-	  span.setAttribute("role","tooltip");
+    
+    //span.setAttribute("class", "glyphicon glyphicon-record");
 	  span.innerHTML = 'E';
 	  button.appendChild(span);
 
