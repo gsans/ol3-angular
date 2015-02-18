@@ -27,17 +27,17 @@
   <script src="app/mapService.js"></script>
   <script src="app/highlightFilter.js"></script>
   <script src="app/multipleFilter.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link href="assets/css/style.css" rel="stylesheet" />
 
   <script src="vendor/angular-material-icons.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css' />
 
 </head>
 
-<body ng-controller="MainController as mc">
+<body ng-controller="mainController as mc">
   <div id="map"></div>
   <div class="row-fluid">
-    <tabset>
+    <tabset class="tabset">
       <div><a class="pull-right vcenter" ng-show="mc.search.length>0" ng-click="mc.search=''">Cancel Search</a></div>
       <tab heading="Search" active="mc.staticTabs.search">
         <div class="search-tab">

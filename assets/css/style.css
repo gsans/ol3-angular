@@ -9,50 +9,50 @@ html, body, #map {
   height: 200px;
 }
 
-svg .icon {
+#map svg .icon {
   cursor: pointer;
 }
 
-.selected {
+#map .selected {
   fill: #dd1c77;
 }
 
-.highlighted {
+.tabset .highlighted {
   background: yellow;
 }
 
-.popover {
+#map .popover {
   width: 200px;
   z-index: 9999999;
 }
-.ol-control, .ol-scale-line {
+#map .ol-control, .ol-scale-line {
   z-index: 9999999;
 }
 
-.search-tab, .details-tab {
+.tabset .search-tab, .tabset .details-tab {
   margin: 15px;
 }
 
-.search-tab ul {
+.tabset .search-tab ul {
   padding: 0px;
 }
 
-.search-tab .input-group .input-group-addon {
+.tabset .search-tab .input-group .input-group-addon {
   padding-bottom: 4px;
 }
 
 /* remove bootstrap rounded tab corners */
-.nav-tabs > li > a {
+.tabset .nav-tabs > li > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 
-ul {
+.tabset ul {
   list-style-type: none;
 }
 
-.list {
+.tabset .list {
   margin-top: 2px;
   max-height: 150px;
   width: 100%;
@@ -61,12 +61,12 @@ ul {
   border: 1px solid #eee;
 }
 
-.feature-result {
+.tabset .feature-result {
   padding: 10px;
   cursor: pointer;
 }
 
-.feature-result:hover {
+.tabset .feature-result:hover {
   background-color: #dd1c77;
   border: 1px solid #ddd;
   color: #fff;
