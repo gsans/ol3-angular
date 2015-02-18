@@ -1,34 +1,35 @@
 (function() {
-
 'use strict';
-angular.module('app').factory('mapService', ['$compile', service]);
+
+/**
+ * Map Service
+ */
+angular
+  .module('app')
+  .factory('mapService', [
+    '$compile', 
+    service
+  ]);
 
 function service($compile){
-  var ms = {};
-  var defaults = {
-    zoom: 15,
-    startLocation: [0,40],
-    extractStylesKml: false,
-    popupOffset: [0,0],
-    featurePropertiesMap: ['name', 'description', 'address', 'phoneNumber', 'styleUrl'],
-    onFeatureSelected: function(feature) { console.log("feature selected", feature);},
-    setFeatureDetails: function(feature) { console.log("set feature details", feature);}
-  };
-  var zIndex = 9999, popup, selectedFeature;
+  var ms = {},
+    defaults = {
+      zoom: 15,
+      startLocation: [0,40],
+      extractStylesKml: false,
+      popupOffset: [0,0],
+      featurePropertiesMap: ['name', 'description', 'address', 'phoneNumber', 'styleUrl'],
+      onFeatureSelected: function(feature) { console.log("feature selected", feature);}
+    },
+    zIndex = 9999, 
+    popup, 
+    selectedFeature;
   
   ms.map = {};
   
   //check openlayers is available on service instantiation
   if (!ol) return ms;
-  
-  
 
-  
-  ms.collapse= function() {
-    $('#map').height("200px");
-    ms.map.updateSize();
-  }
-  
   ms.hideFeatures = function(features, search){
     //hide any popups
     var element = angular.element('#popup');
@@ -84,7 +85,7 @@ function service($compile){
 
   	  //display feature details and pan
   	  if (pan && feature) {
-  	    ms.displayFeatureDetails(feature);
+        ms.onFeatureSelected(feature);
 			  ms.panToFeature(feature, ms.map.getView().getZoom());
 			
   	    var element = angular.element('#popup');
@@ -109,7 +110,6 @@ function service($compile){
 			return feature;
   }
   
-  
   ms.mapFeatureProperties = function(feature, olFeature) {
     if (!olFeature) return feature;
     if (!feature) feature = {};
@@ -125,7 +125,6 @@ function service($compile){
     if(defaults.onFeatureSelected)
       defaults.onFeatureSelected(feature);
   }
-  
   
   ms.getFeatures = function () {
     var f = []; 
@@ -263,7 +262,6 @@ function service($compile){
 			}
 			
 			if (feature) {
-			  ms.displayFeatureDetails(feature);
 			  ms.panToFeature(feature, ms.map.getView().getZoom());
 			} 
 		});
@@ -292,39 +290,6 @@ function service($compile){
 		ms.map.getView().setCenter(lonLat);
 	};
   
-  ms.displayFeatureDetails = function(feature){
-    defaults.setFeatureDetails(feature.getProperties());
-  }
-  
-  ms.infoSetup = function () {
-    /*$(ms.map.getViewport()).on('mousemove', function(evt) {
-      var pixel = ms.map.getEventPixel(evt.originalEvent);
-      displayFeatureInfo(pixel);
-    });
-    
-    var displayFeatureInfo = function(pixel) {
-      var features = [];
-      ms.map.forEachFeatureAtPixel(pixel, function(feature, layer) {
-        features.push(feature);
-      });
-      var target = document.getElementById(ms.map.getTarget());
-      var ie = document.getElementById('info');
-      
-      if (features.length > 0) {
-        var info = [];
-        var i, ii;
-        for (i = 0, ii = features.length; i < ii; ++i) {
-          info.push(features[i].get('name'));
-        }
-        ie.innerHTML = info.join(', ') || '(unknown)';
-        target.style.cursor = 'pointer';
-      } else {
-        ie.innerHTML = '&nbsp;';
-        target.style.cursor = '';
-      }
-    };*/
-  }
-  
   ms.init = function(c){
     var config = angular.extend(defaults, c);
     
@@ -346,36 +311,8 @@ function service($compile){
 			])
     });
     
-   /*ms.map.getControls().forEach(function(control){
-      if (control instanceof ol.control.Zoom) {
-       control.on("click", function(evt){
-         console.log(evt);
-       }) 
-      }
-    });*/
-    
-    /* zoomin out on selected feature if any
-    1) use events
-      change:center/change:resolution moveend 
-    1) implement custom zoom controls
-       map.setCenter(selectedFeature.geometry.getBounds().getCenterLonLat());
-       map.zoomIn()/zoomOut()
-    
-    $(".ol-zoom-in").unbind("click");
-    $(".ol-zoom-in").on("click", function(event){
-      console.log("clicked");
-      if (selectedFeature) {
-        setTimeout(function(){
-          ms.panToFeature(selectedFeature, ms.map.getView().getZoom());
-        }, 200);
-      }
-    })*/
-    
     ms.popupSetup();
-    ms.infoSetup();
-    
     ms.loadKML();
-    
     ms.zoomToExtend();
   }
   
@@ -455,43 +392,43 @@ function service($compile){
    * @extends {ol.control.Control}
    * @param {Object=} opt_options Control options.
    */
-	var MyZoomToExtentControl = function(opt_options) {
+  var MyZoomToExtentControl = function(opt_options) {
 
-	  var options = opt_options || {};
+    var options = opt_options || {};
 
-	  var button = document.createElement('button');
-	  button.id = 'zoom-to-extent';
+    var button = document.createElement('button');
+    button.id = 'zoom-to-extent';
     button.setAttribute("title","Zoom to Extent");
 
-	  var span = document.createElement('span');
+    var span = document.createElement('span');
     
     //span.setAttribute("class", "glyphicon glyphicon-record");
-	  span.innerHTML = 'E';
-	  button.appendChild(span);
+    span.innerHTML = 'E';
+    button.appendChild(span);
 
-	  var this_ = this;
-	  var handler = function(e) {
-	    e.preventDefault(); //cancel click event
-	    ms.zoomToExtend();
-	    document.getElementById("zoom-to-extent").disabled = true;
-	   	setTimeout(function() {
-			  document.getElementById("zoom-to-extent").disabled = false;
-	    }, 1);
-	  };
+    var this_ = this;
+    var handler = function(e) {
+      e.preventDefault(); //cancel click event
+      ms.zoomToExtend();
+      document.getElementById("zoom-to-extent").disabled = true;
+      setTimeout(function() {
+        document.getElementById("zoom-to-extent").disabled = false;
+      }, 1);
+    };
 
-	  button.addEventListener('click', handler, true);
-	  button.addEventListener('touchstart', handler, true);
+    button.addEventListener('click', handler, true);
+    button.addEventListener('touchstart', handler, true);
 
-	  var element = document.createElement('div');
-	  element.className = 'zoom-to-extent ol-zoom-extent ol-unselectable ol-control';
-	  element.appendChild(button);
+    var element = document.createElement('div');
+    element.className = 'zoom-to-extent ol-zoom-extent ol-unselectable ol-control';
+    element.appendChild(button);
 
-	  ol.control.Control.call(this, {
-	    element: element,
-	    target: options.target
-	  });
+    ol.control.Control.call(this, {
+      element: element,
+      target: options.target
+    });
 
-	};
+  };
 	ol.inherits(MyZoomToExtentControl, ol.control.ZoomToExtent);
   
   return ms;

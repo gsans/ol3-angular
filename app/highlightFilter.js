@@ -1,7 +1,15 @@
 (function() {
-
 'use strict';
-angular.module('app').filter('highlight', ['$sce', filter]);
+
+/**
+ * Highlight filter
+ */
+angular
+  .module('app')
+  .filter('highlight', [
+    '$sce', 
+    filter
+  ]);
 
 /**
  * Creates a filter that wraps each search term occurrence in a span element with the 'highlighted' css class
@@ -26,7 +34,9 @@ function filter($sce) {
     var terms = searchTerms.split(' ') || [searchTerms]; 
     
     terms.forEach(function(item){
-      if (inputText)
+      // avoid messing with HTML tags
+      // needs a clever regular expression that skips HTML tags matches altogether
+      if (inputText && inputText.indexOf("<")===-1)
         inputText = inputText.replace(new RegExp('(' + item + ')', 'gi'),
           '<span class="highlighted">$1</span>')
     });

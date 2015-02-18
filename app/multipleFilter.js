@@ -1,8 +1,15 @@
-//http://stackoverflow.com/questions/23504757/angular-js-filter-by-logical-and-using-multiple-terms
 (function() {
-
 'use strict';
-angular.module('app').filter('multiple', ['$rootScope', filter]);
+
+/**
+ * Multiple terms search filter
+ */
+angular
+  .module('app')
+  .filter('multiple', [
+    '$rootScope', 
+    filter
+  ]);
 
 /**
  * Creates a filter that takes into account multiple search terms
