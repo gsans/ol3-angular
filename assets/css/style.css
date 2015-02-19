@@ -1,3 +1,6 @@
+/*----------------------------------------*/
+/* map styles 
+*/
 html, body, #map {
   padding: 0;
   margin: 0;
@@ -9,37 +12,29 @@ html, body, #map {
   height: 200px;
 }
 
-#map svg .icon {
-  cursor: pointer;
-}
-
-#map .selected {
-  fill: #dd1c77;
-}
-
-.tabset .highlighted {
-  background: yellow;
-}
-
 #map .popover {
   width: 200px;
   z-index: 9999999;
 }
+
+/* custom svg marker styles */
+#map svg .icon {
+  cursor: pointer;
+}
+
+#map svg .icon.selected {
+  fill: #dd1c77;
+}
+
+/* custom zoom to extent control */
 #map .ol-control, .ol-scale-line {
   z-index: 9999999;
 }
 
-.tabset .search-tab, .tabset .details-tab {
-  margin: 15px;
-}
 
-.tabset .search-tab ul {
-  padding: 0px;
-}
-
-.tabset .search-tab .input-group .input-group-addon {
-  padding-bottom: 4px;
-}
+/*----------------------------------------*/
+/* tabs 
+*/
 
 /* remove bootstrap rounded tab corners */
 .tabset .nav-tabs > li > a {
@@ -48,8 +43,22 @@ html, body, #map {
   border-radius: 0;
 }
 
-.tabset ul {
+.tabset .details-tab .highlighted {
+  background: yellow;
+}
+
+.tabset .search-tab, .tabset .details-tab {
+  margin: 15px;
+}
+
+/* search tab */
+.tabset .search-tab ul {
   list-style-type: none;
+  padding: 0px;
+}
+
+.tabset .search-tab .input-group .input-group-addon {
+  padding-bottom: 4px;
 }
 
 .tabset .list {
@@ -72,8 +81,8 @@ html, body, #map {
   color: #fff;
 }
 
-.vcenter {
+/* cancel search link */
+.tabset .vcenter {
   padding: 10px 15px;
   cursor: pointer;
 }
-
