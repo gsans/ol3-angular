@@ -31,7 +31,7 @@ function Controller(mapService, $timeout, $rootScope) {
 
 
   ///////////////////////////////////////////////////////////
-  // map to view interaction
+  // map to view interactions
 
   /**
    * Event handler triggered when a feature is selected
@@ -43,7 +43,7 @@ function Controller(mapService, $timeout, $rootScope) {
   function onFeatureSelected(feature) {
     console.log("feature selected", feature);
     // safely run after digest cycle
-    // needed to handle user list selection 
+    // needed to handle list selection 
     $timeout(function(){
       vm.feature = feature;
       selectTab("details");
@@ -61,7 +61,7 @@ function Controller(mapService, $timeout, $rootScope) {
   }
 
   ///////////////////////////////////////////////////////////
-  // view to map interaction
+  // view to map interactions
   
   // subscribe to event
   $rootScope.$on("global.hide-features", vm.hideFeatures);

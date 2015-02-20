@@ -7,11 +7,10 @@
 angular
   .module('app')
   .factory('mapService', [
-    '$compile', 
     service
   ]);
 
-function service($compile){
+function service(){
   // check openlayers is available on service instantiation
   // this can be handled with Require later on
   if (!ol) return {};
@@ -40,18 +39,26 @@ function service($compile){
   };
   
   return ms;
+  
+  ///////////////////////////////////////////////////////////
+  // helper functions
 
-  function getFeatures() {
-    var f = []; 
-    map  //ol.Map
+  function olMapFeatures() {
+    var featuresArray = map  //ol.Map
       .getLayers()  //ol.Collection
       .getArray()[1]  //ol.layer.Vector
         .getSource()  //ol.source.KML
           .getFeatures()  //ol.Feature
-          .forEach(function(olFeature, i) {
-            var feature = {id: olFeature.getId()};
-            f.push(mapFeatureProperties(feature, olFeature));
-          });
+    return featuresArray;
+  }
+
+  function getFeatures() {
+    var f = []; 
+    olMapFeatures()
+      .forEach(function(olFeature, i) {
+        var feature = {id: olFeature.getId()};
+        f.push(mapFeatureProperties(feature, olFeature));
+      });
     return f;
   }
   
@@ -61,16 +68,12 @@ function service($compile){
     var target = $("#map path[feature='" + escape(name) + "']")[0];
     
     //search for feature
-    map  //ol.Map
-    .getLayers()  //ol.Collection
-    .getArray()[1]  //ol.layer.Vector
-      .getSource()  //ol.source.KML
-        .getFeatures()
-        .forEach(function(item, i) {
-          var f = item.get('name');
-          if (name==f)
-            feature = item;
-        });
+    olMapFeatures()
+      .forEach(function(item, i) {
+        var f = item.get('name');
+        if (name==f)
+          feature = item;
+      });
     selectedFeature = feature;
     
     if (feature) {
@@ -191,19 +194,15 @@ function service($compile){
     
     //wait till directive renders svg element
     setTimeout(function() {
-      map	//ol.Map
-    	  .getLayers()	//ol.Collection
-    	  .getArray()[1]	//ol.layer.Vector
-    	  	.getSource()	//ol.source.KML
-    			  .getFeatures()
-    			  .forEach(function(item, i, arr){
-    			    var hidden = item.get('hidden');
-    			    if (!hidden) {
-                var coordinates = item.getGeometry().getCoordinates();
-                var overlay = createSVGOverlay(coordinates, item);
-                map.addOverlay(overlay);
-    			    }
-            });      
+      olMapFeatures()
+        .forEach(function(item, i, arr){
+          var hidden = item.get('hidden');
+          if (!hidden) {
+            var coordinates = item.getGeometry().getCoordinates();
+            var overlay = createSVGOverlay(coordinates, item);
+            map.addOverlay(overlay);
+          }
+        });      
     }, 0);
   }
   
@@ -307,7 +306,7 @@ function service($compile){
   
   function init(config){
     var config = angular.extend(defaults, config);
-    
+
     createMyZoomToExtentControl();
     
     // map initialisation
@@ -382,16 +381,12 @@ function service($compile){
   function zoomToExtend() {
 		var bounds = ol.extent.createEmpty();
 		
-		 map	//ol.Map
-    	  .getLayers()	//ol.Collection
-    	  .getArray()[1]	//ol.layer.Vector
-    	  	.getSource()	//ol.source.KML
-    	  	.getFeatures()
-    			  .forEach(function(item, i, arr){
-              var ext = ol.extent.createEmpty();
-				      ext = item.getGeometry().getExtent();
-				      bounds = ol.extent.extend(bounds, ext);
-            });
+		olMapFeatures()
+      .forEach(function(item, i, arr){
+        var ext = ol.extent.createEmpty();
+        ext = item.getGeometry().getExtent();
+        bounds = ol.extent.extend(bounds, ext);
+      });
             
 		if (bounds) {
 		  // increase bounds using a tenth of the 
