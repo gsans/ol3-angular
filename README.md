@@ -1,5 +1,5 @@
 #Openlayers 3 + AngularJS 1.3.x
-Demo using an embedded KML source.
+[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview) using an embedded KML source.
 
 ##Features
 - Load embedded KML data
