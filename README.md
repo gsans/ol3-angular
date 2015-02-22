@@ -38,5 +38,7 @@
 - add Google maps integration
 - add nice provider control
 
-## Want to collaborate, improve, comment or create new projects?
-Contact me on gerard_dot_sans_at_gmail_dot_com or follow me on [@gerardsans](https://twitter.com/gerardsans).
+## Want to collaborate?
+Email: [gerard.sans@gmail.com](mailto:gerard.sans@gmail.com?Subject=heya%21&Body=%5E_%5E) 
+Twitter: [@gerardsans](https://twitter.com/gerardsans)
+Facebook: [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo)
