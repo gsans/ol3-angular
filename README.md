@@ -1,30 +1,32 @@
 #Openlayers 3 + AngularJS 1.3.x
 [Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview) using an embedded KML source.
 
+[Angular — Integration with OpenLayers 3 (Draft)](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635)
+
 ##Features
-- Load embedded KML data
-- Render markers using a png icon (data:image/png)
-- Render list of markers
-- Add details popup
-- Switched KML icons with customised styling 
-- Render markers using svg icon
-- Added drop-shadow filter to svg (looks too flat otherwise)
-- Added search filter and highlighting
-- Added ui bootstrap + tabs
-- open popup on svg markers
-- add zoom to max extent
+- loads embedded KML data
+- renders markers using a png icon (data:image/png)
+- renders list of markers
+- added details popup
+- switched KML icons with customised styling 
+- renders markers using svg icon
+- added drop-shadow filter to svg (looks too flat otherwise)
+- added search filter and highlighting
+- added ui bootstrap + tabs
+- opens popup on svg markers
+- added zoom to max extent
 - added scale control
-- add config options to init
-- add google fonts: Open Sans
-- polish ui and format details
-- z-index of selected marker should be on top
-- select and fill details when clicking on svg marker
-- locate marker from list
-- fix ol controls z-index
-- cancel search option
-- hide/show from list
-- add multiple queries
-- add custom zoom to extent button
+- added config options to init
+- added google fonts: Open Sans
+- polished ui and format details
+- z-index of selected marker is on top
+- selects and fills details when clicking on svg marker
+- locates marker from list
+- fixed ol controls z-index
+- added cancel search option
+- hides/shows from list
+- added multiple queries
+- added custom zoom to extent button
 
 ##Todo
 - all done
@@ -35,3 +37,6 @@
 - smoother animations (http://tweene.com/)
 - add Google maps integration
 - add nice provider control
+
+## Want to collaborate, improve, comment or create new projects?
+Contact me on gerard_dot_sans_at_gmail_dot_com or follow me on [@gerardsans](https://twitter.com/gerardsans).
