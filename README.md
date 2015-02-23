@@ -42,5 +42,7 @@
 
 ## Want to collaborate?
 Email: [gerard.sans@gmail.com](mailto:gerard.sans@gmail.com?Subject=heya%21&Body=%5E_%5E) 
+
 Twitter: [@gerardsans](https://twitter.com/gerardsans)
+
 Facebook: [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo)
