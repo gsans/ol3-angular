@@ -57,4 +57,4 @@ Gerard Sans, BST Senior JavaScript Developer
 
 Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
 
-Contact me if you want to collaborate or have any questions.
+Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
