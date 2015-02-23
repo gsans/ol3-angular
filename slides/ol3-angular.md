@@ -7,13 +7,13 @@ class: center, middle
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Who Am I?
+2. Demo
+3. Integration
 
 ---
 
-# Introduction
+# 1. Who Am I?
 
 Gerard Sans, BST Senior JavaScript Developer
 
@@ -24,3 +24,20 @@ Gerard Sans, BST Senior JavaScript Developer
 - Started the AngularJS Meetup Waterloo last August to help Josh and Ed.
   - New format. Hacking sessions (looking for sponsors)
 - Started blogging about JS/AngularJS at Coderwall and later on Medium.
+
+---
+
+# 2. Demo
+
+[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview)
+
+---
+
+# 3. Integration
+
+- Map to Angular (View)
+  - via `$timeout(function(){...})`
+
+- Angular (View) to Map
+  - via message bus `$broadcast` and `$on`
+  - via ng-click
