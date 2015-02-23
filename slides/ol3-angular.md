@@ -12,6 +12,7 @@ Gerard Sans
 1. Who Am I?
 2. Demo
 3. Integration
+4. More
 
 ---
 
@@ -42,4 +43,17 @@ Gerard Sans, BST Senior JavaScript Developer
 
 - Angular (View) to Map
   - via message bus `$broadcast` and `$on`
-  - via ng-click
+  - via `ng-click`
+
+---
+
+# 4. More
+
+- Extending default Angular single search term to accept multiple terms.
+- Custom SVG markers, with custom styles and adding a drop-shadow effect.
+- Custom OpenLayers Button Control, zoom to extent.
+- Styling: using UI Bootstrap and Open Sans Google font.
+
+Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
+
+Contact me if you want to collaborate or have any questions.
