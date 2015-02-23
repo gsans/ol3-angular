@@ -1,7 +1,9 @@
 #Openlayers 3 + AngularJS 1.3.x
-[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview) using an embedded KML source.
+[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview) using an embedded KML source with some London co-working offices taken from Foursquare.
 
-[Angular — Integration with OpenLayers 3 (Draft)](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635)
+[Angular — Integration with OpenLayers 3 (Draft), posted in Medium](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635)
+
+[Slides](https://gnab.github.io/remark/remarkise?url=https%3A%2F%2Frawgit.com%2Fgsans%2Fol3-angular%2Fmaster%2Fslides%2Fol3-angular.md#1)
 
 ##Features
 - loads embedded KML data
