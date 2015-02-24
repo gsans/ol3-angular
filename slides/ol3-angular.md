@@ -69,5 +69,12 @@ Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any que
     font-family: 'Yanone Kaffeesatz';
     font-weight: normal;
   }
+  code {
+    -moz-border-radius: 5px;
+    -web-border-radius: 5px;
+    background: #e7e8e2;
+    border-radius: 5px;
+  }
   .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+  .remark-code-line-highlighted     { background-color: #373832; }
 </style>
