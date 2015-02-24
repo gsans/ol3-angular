@@ -40,12 +40,12 @@ class: center, middle
 
 # 3. Integration
 
-##- **Map to Angular (View)**
-    - via `$timeout(function(){...})`
+- **Map to Angular (View)**
+  - via `$timeout(function(){...})`
 
-##- **Angular (View) to Map**
-    - via message bus `$broadcast` and `$on`
-    - via `ng-click`
+- **Angular (View) to Map**
+  - via message bus `$broadcast` and `$on`
+  - via `ng-click`
 
 ---
 
