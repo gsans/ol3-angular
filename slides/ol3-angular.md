@@ -29,7 +29,7 @@ class: center, middle
 - **AngularJS Community**
   - Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
   - New format. Hacking sessions (**looking for sponsors**)
-  - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories)
+  - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories). [Google doc](https://docs.google.com/document/d/1kcbcCOiLmcKuvyoocYqTStsC5_kMzeq4IKUlfqHPuW0/edit?usp=sharing)
   - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
 
 ---
