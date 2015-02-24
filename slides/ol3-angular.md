@@ -84,9 +84,9 @@ class: center, middle
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
   @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
   
-  body { font-family: 'Open Sans'; }
+  body { xfont-family: 'Open Sans'; }
   h1, h2, h3 {
-    font-family: 'Open Sans';
+    xfont-family: 'Open Sans';
     font-weight: normal; 
   }
   code {
