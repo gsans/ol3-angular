@@ -1,16 +1,3 @@
-<style type="text/css">
-  @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-  @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-  @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-  body { font-family: 'Droid Serif'; }
-  h1, h2, h3 {
-    font-family: 'Yanone Kaffeesatz';
-    font-weight: normal;
-  }
-  .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-</style>
-    
 class: center, middle
 
 # Angular — Integration with OpenLayers 3
@@ -71,3 +58,16 @@ Gerard Sans, BST Senior JavaScript Developer
 Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
 
 Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
+
+<style type="text/css">
+  @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+  @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+  @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+  body { font-family: 'Droid Serif'; }
+  h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+  }
+  .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+</style>
