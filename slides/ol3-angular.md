@@ -25,7 +25,7 @@ class: center, middle
     - Worked for consultancies, end-clients and startups
   - Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
 
-- *AngularJS Community*
+- **AngularJS Community**
   - Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
     - New format. Hacking sessions (**looking for sponsors**)
   - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
