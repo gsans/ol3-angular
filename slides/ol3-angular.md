@@ -94,6 +94,10 @@ class: center, middle
   .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
   .remark-code-line-highlighted     { background-color: #373832; }
   
+  .remark-slide-content ul li {
+    font-size: 18px;
+  }
+  
   a, a > code {
     color: #a33;
     background: #ffeaea;
