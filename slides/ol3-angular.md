@@ -12,7 +12,7 @@ class: center, middle
 ##1. Who Am I?
 ##2. Demo
 ##3. Integration
-##4. More
+##4. Extras
 
 ---
 
@@ -49,7 +49,7 @@ class: center, middle
 
 ---
 
-# 4. More
+# 4. Extras
 
 - Extending default Angular single search term to accept multiple terms.
 - Custom SVG markers, with custom styles and adding a drop-shadow effect.
