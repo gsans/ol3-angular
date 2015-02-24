@@ -26,6 +26,7 @@ class: center, middle
     - Worked for consultancies, end-clients and startups (Spain, Germany, UK and Brazil)
   - Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
   - Planning to get the [Google Developer Expert badge for AngularJS](https://developers.google.com/experts/become-an-expert) in 2015.
+
 ]
 
 - **AngularJS Community**
@@ -35,6 +36,7 @@ class: center, middle
   - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories). [Google doc](https://docs.google.com/document/d/1kcbcCOiLmcKuvyoocYqTStsC5_kMzeq4IKUlfqHPuW0/edit?usp=sharing)
     - Help me to make it happen! =) 
   - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
+
 ]
 
 ---
