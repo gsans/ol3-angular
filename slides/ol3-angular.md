@@ -69,7 +69,7 @@ Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any que
   body { font-family: 'Open Sans'; }
   h1, h2, h3 {
     font-family: 'Open Sans';
-    font-weight: normal;
+    font-weight: normal; 
   }
   code {
     -moz-border-radius: 5px;
