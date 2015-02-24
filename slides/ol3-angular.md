@@ -61,12 +61,12 @@ Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any que
 
 <style type="text/css">
   @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-  @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
   @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
   
-  body { font-family: 'Droid Serif'; }
+  body { font-family: 'Open Sans'; }
   h1, h2, h3 {
-    font-family: 'Yanone Kaffeesatz';
+    font-family: 'Open Sans';
     font-weight: normal;
   }
   code {
