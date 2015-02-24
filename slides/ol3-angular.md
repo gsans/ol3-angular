@@ -13,6 +13,7 @@ class: center, middle
 ##2. Demo
 ##3. Integration
 ##4. Extras
+##5. Q&A
 
 ---
 
@@ -61,9 +62,15 @@ class: center, middle
 - Using OpenLayers smooth animations.
 - Styling: using [UI Bootstrap](http://angular-ui.github.io/bootstrap/) and Open Sans Google font.
 
-Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more in-depth details.
+---
 
-Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
+# 5. Q&A
+
+- Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more in-depth details.
+
+- You can contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
+
+# Thank you!
 
 <style type="text/css">
   @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
