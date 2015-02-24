@@ -55,9 +55,10 @@ class: center, middle
 
 - Extending default Angular single search term to accept multiple terms.
 - Custom SVG markers, with custom styles and adding a drop-shadow effect.
+  - [Angular Material Icons with custom fill-color and size](http://klarsys.github.io/angular-material-icons/). Includes optional [SVG Morpheus](http://alexk111.github.io/SVG-Morpheus/).    
 - Custom OpenLayers Button Control, zoom to extent.
 - Using OpenLayers smooth animations.
-- Styling: using UI Bootstrap and Open Sans Google font.
+- Styling: using [UI Bootstrap](http://angular-ui.github.io/bootstrap/) and Open Sans Google font.
 
 Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
 
