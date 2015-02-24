@@ -23,7 +23,7 @@ class: center, middle
 
   - CS Engineer (5 years degree) 
   - Former **C# .NET Developer**, doing mainly Web Development (overall +10 years) 
-    - Worked for consultancies, end-clients and startups
+    - Worked for consultancies, end-clients and startups (Spain, Germany, UK and Brazil)
   - Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
   - Planning to get the [Google Developer Expert badge for AngularJS](https://developers.google.com/experts/become-an-expert) in 2015.
 
