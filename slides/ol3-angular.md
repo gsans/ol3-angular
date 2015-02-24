@@ -24,6 +24,7 @@ class: center, middle
   - Former **C# .NET Developer**, doing mainly Web Development (overall +10 years) 
     - Worked for consultancies, end-clients and startups
   - Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
+  - Plan to get the [Google Developer Expert in AngularJS](https://developers.google.com/experts/all/technology/angular-js) in 2015.
 
 - **AngularJS Community**
   - Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
