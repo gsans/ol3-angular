@@ -34,18 +34,18 @@ class: center, middle
 
 # 2. Demo
 
-[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview)
+##[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview)
 
 ---
 
 # 3. Integration
 
-- **Map to Angular (View)**
-  - via `$timeout(function(){...})`
+##- **Map to Angular (View)**
+    - via `$timeout(function(){...})`
 
-- **Angular (View) to Map**
-  - via message bus `$broadcast` and `$on`
-  - via `ng-click`
+##- **Angular (View) to Map**
+    - via message bus `$broadcast` and `$on`
+    - via `ng-click`
 
 ---
 
