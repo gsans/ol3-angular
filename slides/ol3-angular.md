@@ -3,7 +3,7 @@ class: center, middle
 # Angular — Integration with OpenLayers 3
 <img src="https://pbs.twimg.com/profile_images/2149314222/square_400x400.png" height="100"> <img src="http://cdn1.iconfinder.com/data/icons/musthave/256/Add.png" height="25"> <img src="https://avatars3.githubusercontent.com/u/240579?v=3&s=400" height="100">
 
-[Gerard Sans.](https://twitter.com/gerardsans)
+[Gerard Sans](https://twitter.com/gerardsans)
 
 ---
 
@@ -77,4 +77,9 @@ Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any que
   }
   .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
   .remark-code-line-highlighted     { background-color: #373832; }
+  
+  a, a > code {
+    color: rgb(249, 38, 114);
+    text-decoration: none;
+  }
 </style>
