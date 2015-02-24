@@ -62,6 +62,9 @@ class: center, middle
 - Using OpenLayers smooth animations.
 - Styling: using [UI Bootstrap](http://angular-ui.github.io/bootstrap/) and Open Sans Google font.
 
+- Links:
+  - Swiss Confederation geo.admin.ch  (OpenLayers 3 + Angular 1.3.x). [live](http://map.geo.admin.ch/) | [github](https://github.com/geoadmin/mf-geoadmin3)
+
 ---
 
 # 5. Q&A
