@@ -18,14 +18,14 @@ class: center, middle
 
 # 1. Who Am I?
 
-Gerard Sans, BST Senior JavaScript Developer
+**Gerard Sans**, BST Senior JavaScript Developer
 
 - CS Engineer (5 years degree) 
-- Former C# .NET Developer, doing mainly Web Development (overall +10 years) 
+- Former **C# .NET Developer**, doing mainly Web Development (overall +10 years) 
   - Worked for consultancies, end-clients and startups
-- Just recently switched to full-time JavaScript/AngularJS Developer (1 year)
+- Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
 - Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
-  - New format. Hacking sessions (looking for sponsors)
+  - New format. Hacking sessions (**looking for sponsors**)
 - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
 
 ---
@@ -38,10 +38,10 @@ Gerard Sans, BST Senior JavaScript Developer
 
 # 3. Integration
 
-- Map to Angular (View)
+- **Map to Angular (View)**
   - via `$timeout(function(){...})`
 
-- Angular (View) to Map
+- **Angular (View) to Map**
   - via message bus `$broadcast` and `$on`
   - via `ng-click`
 
@@ -79,7 +79,8 @@ Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any que
   .remark-code-line-highlighted     { background-color: #373832; }
   
   a, a > code {
-    color: rgb(249, 38, 114);
+    color: #a33;
+    background: #ffeaea;
     text-decoration: none;
   }
 </style>
