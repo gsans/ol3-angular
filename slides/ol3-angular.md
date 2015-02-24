@@ -20,18 +20,22 @@ class: center, middle
 # 1. Who Am I?
 
 - **Gerard Sans**, BST Senior JavaScript Developer
+.section[
   - CS Engineer (5 years degree) 
   - Former **C# .NET Developer**, doing mainly Web Development (overall +10 years) 
     - Worked for consultancies, end-clients and startups (Spain, Germany, UK and Brazil)
   - Just recently switched to **full-time JavaScript/AngularJS Developer** (1 year)
   - Planning to get the [Google Developer Expert badge for AngularJS](https://developers.google.com/experts/become-an-expert) in 2015.
+]
 
 - **AngularJS Community**
+.section[
   - Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
   - New format. Hacking sessions (**looking for sponsors**)
   - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories). [Google doc](https://docs.google.com/document/d/1kcbcCOiLmcKuvyoocYqTStsC5_kMzeq4IKUlfqHPuW0/edit?usp=sharing)
     - Help me to make it happen! =) 
   - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
+]
 
 ---
 
