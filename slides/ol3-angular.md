@@ -27,9 +27,9 @@ class: center, middle
   - Planning to get the [Google Developer Expert badge for AngularJS](https://developers.google.com/experts/become-an-expert) in 2015.]
 
 - **AngularJS Community**
-    - .section[Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
-    - New format. Hacking sessions (**looking for sponsors**)
-    - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories)
+  - .section[Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
+  - New format. Hacking sessions (**looking for sponsors**)
+  - Idea to create the first **Angular Festival** (Panel, Submissions, Teams, Categories)
   - Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).]
 
 ---
