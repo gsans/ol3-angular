@@ -61,7 +61,7 @@ class: center, middle
 - Using OpenLayers smooth animations.
 - Styling: using [UI Bootstrap](http://angular-ui.github.io/bootstrap/) and Open Sans Google font.
 
-Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
+Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more in-depth details.
 
 Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
 
