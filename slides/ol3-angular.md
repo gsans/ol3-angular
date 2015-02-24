@@ -24,9 +24,9 @@ Gerard Sans, BST Senior JavaScript Developer
 - Former C# .NET Developer, doing mainly Web Development (overall +10 years) 
   - Worked for consultancies, end-clients and startups
 - Just recently switched to full-time JavaScript/AngularJS Developer (1 year)
-- Started the AngularJS Meetup Waterloo last August to help Josh and Ed.
+- Started the [AngularJS Meetup Waterloo](https://www.facebook.com/angularjswaterloo) last August to help Josh and Ed.
   - New format. Hacking sessions (looking for sponsors)
-- Started blogging about JS/AngularJS at Coderwall and later on Medium.
+- Started blogging about JS/AngularJS at [Coderwall](https://coderwall.com/p/u/gsans) and later on [Medium](https://medium.com/@gerard.sans).
 
 ---
 
