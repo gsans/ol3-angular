@@ -1,22 +1,19 @@
+
 name: inverse
 class: center, middle, inverse
-
+---
 # Angular — Integration with OpenLayers 3
 <img src="https://pbs.twimg.com/profile_images/2149314222/square_400x400.png" height="100"> <img src="http://cdn1.iconfinder.com/data/icons/musthave/256/Add.png" height="25"> <img src="https://avatars3.githubusercontent.com/u/240579?v=3&s=400" height="100">
 
 .footnote[[Gerard Sans](https://twitter.com/gerardsans)]
-
 ---
-
 # Agenda
 
 1. Who Am I?
 2. Demo
 3. Integration
 4. More
-
 ---
-
 # 1. Who Am I?
 
 Gerard Sans, BST Senior JavaScript Developer
@@ -28,15 +25,11 @@ Gerard Sans, BST Senior JavaScript Developer
 - Started the AngularJS Meetup Waterloo last August to help Josh and Ed.
   - New format. Hacking sessions (looking for sponsors)
 - Started blogging about JS/AngularJS at Coderwall and later on Medium.
-
 ---
-
 # 2. Demo
 
 [Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview)
-
 ---
-
 # 3. Integration
 
 - Map to Angular (View)
@@ -45,9 +38,7 @@ Gerard Sans, BST Senior JavaScript Developer
 - Angular (View) to Map
   - via message bus `$broadcast` and `$on`
   - via `ng-click`
-
 ---
-
 # 4. More
 
 - Extending default Angular single search term to accept multiple terms.
@@ -59,7 +50,7 @@ Gerard Sans, BST Senior JavaScript Developer
 Check out this [post](https://medium.com/angularjs-meetup-south-london/angular-integration-with-openlayers-3-5a6e8d29e635) for more details.
 
 Contact me at `gerard.sans@gmail.com` if you want to collaborate or have any questions.
-
+---
 <style type="text/css">
   @import url(//fonts.googleapis.com/css?family=Droid+Serif);
   @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
