@@ -1,5 +1,4 @@
 name: inverse
-layout: true
 class: center, middle, inverse
 
 # Angular — Integration with OpenLayers 3
