@@ -36,7 +36,7 @@ function Controller(mapService, $timeout, $rootScope) {
   /**
    * Event handler triggered when a feature is selected
    *
-   * @param {feature} feature selected. 
+   * @param {Object} feature - feature selected. 
    * 
    * Feature properties are defined by config.featurePropertiesMap.
    */
@@ -53,7 +53,7 @@ function Controller(mapService, $timeout, $rootScope) {
   /**
    * Activates tab
    *
-   * @param {key} tab id 
+   * @param {String} key - tab id 
    */
   function selectTab(key){
     if (vm.staticTabs.hasOwnProperty(key))
@@ -69,7 +69,7 @@ function Controller(mapService, $timeout, $rootScope) {
   /**
    * Selects a single feature on the map
    *
-   * @param {name} feture id 
+   * @param {String} id - feature id 
    */
   function selectFeature(id){
     mapService.selectFeature(id, true);
@@ -78,8 +78,8 @@ function Controller(mapService, $timeout, $rootScope) {
   /**
    * Hides features on the map
    *
-   * @param {event} event object
-   * @param {Array} feature ids that should be shown
+   * @param {Event} event       - event object
+   * @param {Array} features    - feature ids that should be shown
    */
   function hideFeatures(event, features){
     mapService.hideFeatures(features, vm.search);

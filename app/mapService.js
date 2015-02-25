@@ -336,7 +336,7 @@ function service(){
     /**
      * @constructor
      * @extends {ol.control.Control}
-     * @param {Object=} opt_options Control options.
+     * @param {Object} opt_options - Control options.
      */
     myZoomToExtentControl = function (opt_options) {
 
