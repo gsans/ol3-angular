@@ -29,6 +29,7 @@ function Controller(mapService, $timeout, $rootScope) {
   vm.features = mapService.getFeatures();
   vm.selectFeature = selectFeature;
   vm.hideFeatures = hideFeatures;
+  vm.cancelSearch = cancelSearch;
 
 
   ///////////////////////////////////////////////////////////
@@ -84,6 +85,19 @@ function Controller(mapService, $timeout, $rootScope) {
    */
   function hideFeatures(event, features){
     mapService.hideFeatures(features, vm.search);
+  };
+
+  /**
+   * Cancels search and zoom to extent
+   */
+  function cancelSearch(){
+    var undefined, 
+      zoomToExtent = true;
+      
+    selectTab("search");
+    vm.search = "";
+    vm.feature = undefined;
+    mapService.unselectFeature(zoomToExtent);
   };
 }
 

@@ -33,7 +33,8 @@ function service(){
     init: init,
     getFeatures: getFeatures,
     selectFeature: selectFeature,
-    hideFeatures: hideFeatures
+    hideFeatures: hideFeatures,
+    unselectFeature: unselectFeature
   };
   
   return ms;
@@ -59,6 +60,16 @@ function service(){
       });
     return f;
   }
+
+  function unselectFeature(zoom) {
+    var undefined;
+    selectedFeature = undefined;
+    $("#map path").each(function(index, item){
+        item.setAttribute("class", "icon");
+      });
+    if (zoom) 
+      zoomToExtent();
+  }
   
   function selectFeature(name, pan){
     var feature;
@@ -75,9 +86,7 @@ function service(){
     selectedFeature = feature;
     
     if (feature) {
-      $("#map path").each(function(index, item){
-        item.setAttribute("class", "icon");
-      });
+      unselectFeature();
       target.setAttribute("class", "icon selected");
       
       //put on top
@@ -327,7 +336,7 @@ function service(){
     
     popupSetup();
     loadKML();
-    zoomToExtend();
+    zoomToExtent();
   }
 
   function createMyZoomToExtentControl(){
@@ -353,7 +362,7 @@ function service(){
       var this_ = this;
       var handler = function(e) {
         e.preventDefault(); //cancel click event
-        zoomToExtend();
+        zoomToExtent();
         document.getElementById("zoom-to-extent").disabled = true;
         setTimeout(function() {
           document.getElementById("zoom-to-extent").disabled = false;
@@ -376,7 +385,7 @@ function service(){
     ol.inherits(myZoomToExtentControl, ol.control.ZoomToExtent);
   }
   
-  function zoomToExtend() {
+  function zoomToExtent() {
 		var bounds = ol.extent.createEmpty();
 		
 		olMapFeatures()
