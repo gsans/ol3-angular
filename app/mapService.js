@@ -6,9 +6,7 @@
  */
 angular
   .module('app')
-  .factory('mapService', [
-    service
-  ]);
+  .factory('mapService', service);
 
 function service(){
   // check openlayers is available on service instantiation

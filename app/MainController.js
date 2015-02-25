@@ -6,12 +6,13 @@
  */
 angular
   .module('app')
-  .controller('mainController', [
+  .controller('mainController', Controller);
+
+Controller.$inject = [
     'mapService', 
     '$timeout', 
-    '$rootScope', 
-    Controller
-  ]);
+    '$rootScope'
+];
 
 function Controller(mapService, $timeout, $rootScope) {
   var vm = this;

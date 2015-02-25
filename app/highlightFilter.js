@@ -6,10 +6,7 @@
  */
 angular
   .module('app')
-  .filter('highlight', [
-    '$sce', 
-    filter
-  ]);
+  .filter('highlight', filter);
 
 /**
  * Creates a filter that wraps each search term occurrence in a span element with the 'highlighted' css class
@@ -20,6 +17,10 @@ angular
  * See [$sce]{@link https://docs.angularjs.org/api/ng/service/$sce}
  * Credits [higlight filter]{@link http://stackoverflow.com/questions/15519713/highlighting-a-filtered-result-in-angularjs/27798600#27798600}
  */
+filter.$inject = [
+  '$sce'
+];
+
 function filter($sce) {
   return highlight;
 

@@ -6,10 +6,7 @@
  */
 angular
   .module('app')
-  .filter('multiple', [
-    '$rootScope', 
-    filter
-  ]);
+  .filter('multiple', filter);
 
 /**
  * Creates a filter that takes into account multiple search terms
@@ -19,6 +16,10 @@ angular
  *
  * Credits [multiple filter]{@link http://stackoverflow.com/questions/23504757/angular-js-filter-by-logical-and-using-multiple-terms}
  */
+filter.$inject = [
+    '$rootScope'
+];
+
 function filter($rootScope) {
   return multiple;
 
