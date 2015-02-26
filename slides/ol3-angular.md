@@ -41,6 +41,9 @@ class: center, middle
 
 # 2. Demo
 
+- Anybody with experience with OpenLayers 3? Maps?
+- How about your experience with Angular? new, 3m, 6m, +1y?
+
 ##[Demo](http://embed.plnkr.co/u6IR40otaEXiUeJYp9BX/preview)
 
 ---
