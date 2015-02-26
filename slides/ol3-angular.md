@@ -49,7 +49,7 @@ class: center, middle
 
 - **Architecture**
   - First Level: **View** (map, search/details tabs) + **Controller**
-    - View uses *directives*, *expressions* and *filters*
+    - **View** uses *directives*, *expressions* and *filters*
   - Second Level: **ol3 library**, **Map Service**, **Filters** (multiple, highlight)
   - Communication is done using **events** (*event handlers*)
 
