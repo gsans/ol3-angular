@@ -45,7 +45,12 @@ class: center, middle
 
 ---
 
-# 3. Integration
+# 3. Integration (1/2)
+
+- **Architecture**
+  - First Level: **View** (map, search/details tabs) + **Controller**
+  - Second Level: **ol3 library**, **Map Service**, **Filters** (multiple, highlight)
+  - Communication is done using **events** (*event handlers*)
 
 - **Map to Angular (View)**
   - via `$timeout(function(){...})`
@@ -53,6 +58,18 @@ class: center, middle
 - **Angular (View) to Map**
   - via message bus `$broadcast` and `$on`
   - via `ng-click`
+
+---
+
+# 3. Integration (2/2)
+
+- **Angular Providers Overview**
+  - ngMdIcons (Angular Material Icons), ui.bootstrap, ngSanitize
+
+- **Angular Directives Overview**
+  - ng-app, ng-controller, ng-show, ng-click, ng-model, ng-model-options, ng-repeat 
+  - ng-md-icon (ngMdIcons)
+  - ng-bind-html ($sce, Strict Contextual Escaping, privileged context)
 
 ---
 
