@@ -29,6 +29,7 @@
 - hides/shows from list
 - added multiple queries
 - added custom zoom to extent button
+- applied [John Papas Guidelines](https://github.com/johnpapa/angular-styleguide) to code
 
 ##Todo
 - all done
