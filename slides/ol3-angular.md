@@ -51,7 +51,7 @@ class: center, middle
 # 3. Integration (1/2)
 
 - **Architecture**
-  - First Level: **View** (map, search/details tabs) + **Controller**
+  - First Level: **Model** Markers/Coordinates + **View** (map, search/details tabs) +  **Controller**
      - **View** uses *directives*, *expressions* and *filters*
   - Second Level: **ol3 library**, **Map Service**, **Filters** (multiple, highlight)
   - Communication is done using **events** (*event handlers*)
