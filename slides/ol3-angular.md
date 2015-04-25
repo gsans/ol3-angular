@@ -21,7 +21,7 @@ class: center, middle
 
 .section[
 
-- **Gerard Sans**, BST Senior JavaScript Developer
+- **Gerard Sans**, Senior JavaScript Developer
   - CS Engineer (5 years degree) 
   - Former **C# .NET Developer**, doing mainly Web Development (overall +10 years) 
     - Worked for consultancies, end-clients and startups (Spain, Germany, UK and Brazil)
